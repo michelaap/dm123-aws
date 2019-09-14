@@ -25,4 +25,10 @@ public class TestController {
 
         return ResponseEntity.ok("Name: " + name);
     }
+
+    @GetMapping("/dogcolor/{name}")
+    public ResponseEntity<?> dogColor(@PathVariable String name) {
+        log.info("Dog color - name: {}", name);
+        return ResponseEntity.ok("Always black!");
+    }
 }
