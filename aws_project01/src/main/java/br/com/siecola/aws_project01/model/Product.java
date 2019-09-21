@@ -1,20 +1,29 @@
 package br.com.siecola.aws_project01.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@Table(
+        uniqueConstraints = {
+                @UniqueConstraint(columnNames = {"code"})
+        }
+)
 @Entity
 public class Product {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
+
+    @Column(length = 32, nullable = false)
     private String name;
+
+    @Column(length = 24, nullable = false)
     private String model;
+
+    @Column(length = 8, nullable = false)
     private String code;
+
     private float price;
-    
+
     public long getId() {
         return id;
     }
