@@ -43,6 +43,9 @@ dependencies {
 	compile group: 'com.amazonaws', name: 'aws-java-sdk-sqs', version: '1.11.613'
 	compile group: 'com.amazonaws', name: 'amazon-sqs-java-messaging-lib', version: '1.0.8'
 	compile group: 'org.springframework', name: 'spring-jms', version: '5.1.9.RELEASE'
+
+    compile group: 'com.amazonaws', name: 'aws-java-sdk-dynamodb', version: '1.11.618'
+    compile group: 'com.github.derjust', name: 'spring-data-dynamodb', version: '5.1.0'
 }
 
 task unpack(type: Copy) {
