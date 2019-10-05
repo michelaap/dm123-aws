@@ -40,6 +40,11 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
+	compile group: 'com.amazonaws', name: 'aws-java-sdk-s3', version: '1.11.613'
+	compile group: 'com.amazonaws', name: 'aws-java-sdk-sqs', version: '1.11.613'
+	compile group: 'com.amazonaws', name: 'amazon-sqs-java-messaging-lib', version: '1.0.8'
+	compile group: 'org.springframework', name: 'spring-jms', version: '5.1.9.RELEASE'
+
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client-jre7', version: '1.6.1'
 	compile group: 'com.amazonaws', name: 'aws-java-sdk-sns', version: '1.11.613'
