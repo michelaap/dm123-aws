@@ -12,5 +12,15 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'com.amazonaws:aws-lambda-java-core:1.2.0'
+    compile 'com.amazonaws:aws-lambda-java-events:2.2.7'
 }
+
+task buildZip(type: Zip) {
+    from compileJava
+    from processResources
+    into('lib') {
+        from configurations.runtime
+    }
+}
+build.dependsOn buildZip
